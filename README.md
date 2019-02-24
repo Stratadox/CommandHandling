@@ -1,6 +1,10 @@
 # Command Handling
 A simple command handling mechanism.
 
+[![Build Status](https://travis-ci.org/Stratadox/CommandHandling.svg?branch=master)](https://travis-ci.org/Stratadox/CommandHandling)
+[![Coverage Status](https://coveralls.io/repos/github/Stratadox/CommandHandling/badge.svg?branch=master)](https://coveralls.io/github/Stratadox/CommandHandling?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Stratadox/CommandHandling/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Stratadox/CommandHandling/?branch=master)
+
 ## Installation
 Install using `composer require stratadox/command-handling`
 
