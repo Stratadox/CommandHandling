@@ -40,7 +40,6 @@ final class OnExceptionCases implements Handler
             $this->handler->handle($command);
         } catch (Throwable $exception) {
             $this->middleware->invoke($command, $exception);
-            throw $exception;
         }
     }
 }

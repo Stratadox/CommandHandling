@@ -30,13 +30,8 @@ class InvokingMiddlewareInExceptionCases extends TestCase
             AlwaysFailingCommand::class => new AlwaysThrowingHandler(),
         ]));
 
-        try {
-            $input->handle(new AlwaysFailingCommand());
+        $input->handle(new AlwaysFailingCommand());
 
-            $this->fail('Expecting an exception while handling the command.');
-        } catch (Throwable $exception) {
-            $this->assertInstanceOf(CommandDenied::class, $exception);
-        }
         $this->assertInstanceOf(
             AlwaysFailingCommand::class,
             $middleware->observedCommand()
@@ -77,7 +72,7 @@ class InvokingMiddlewareInExceptionCases extends TestCase
         try {
             $input->handle(new AlwaysFailingCommand());
 
-            $this->fail('Expecting an exception while handling the command.');
+            $this->fail('Exceptions should not be caught by default.');
         } catch (Throwable $exception) {
             $this->assertInstanceOf(CommandDenied::class, $exception);
         }

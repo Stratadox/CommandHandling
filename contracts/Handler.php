@@ -2,8 +2,6 @@
 
 namespace Stratadox\CommandHandling;
 
-use Throwable;
-
 interface Handler
 {
     /**
@@ -11,7 +9,6 @@ interface Handler
      * exception.
      *
      * @param object $command The command to handle.
-     * @throws Throwable      When the command is denied.
      */
     public function handle(object $command): void;
 }
